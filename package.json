@@ -1,41 +1,32 @@
 {
   "name": "common-syncfusion-extended-grid",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "vasanth",
-  "license": "ISC",
-  "main": "src/Components/CommonGrid.js",
+  "license": "MIT",
+  "main": "lib/Components/CommonGrid.js",
+  "types": "lib/Components/CommonGrid.d.ts",
   "dependencies": {
-    "@syncfusion/ej2-base": "*",
-    "@syncfusion/ej2-buttons": "*",
-    "@syncfusion/ej2-cldr-data": "*",
-    "@syncfusion/ej2-data": "*",
-    "@syncfusion/ej2-documenteditor": "*",
-    "@syncfusion/ej2-lists": "*",
-    "@syncfusion/ej2-locale": "*",
-    "@syncfusion/ej2-navigations": "*",
-    "@syncfusion/ej2-pivotview": "*",
-    "@syncfusion/ej2-react-base": "*",
     "@syncfusion/ej2-react-grids": "*",
-    "@syncfusion/ej2-react-layouts": "*",
-    "@syncfusion/ej2-react-lists": "*",
-    "@syncfusion/ej2-react-navigations": "*",
-    "@syncfusion/ej2-react-popups": "*",
-    "@syncfusion/ej2-react-buttons": "*",
-    "@syncfusion/ej2-react-inputs": "*",
-    "@syncfusion/ej2-schedule": "*",
-    "@syncfusion/ej2-splitbuttons": "*",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.80",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "start": "react-scripts start",
+    "ts-build": "tsc",
     "build": "react-scripts build",
+    "prepare": "npm run ts-build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -64,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/vasanthakumarsf3389/syncfusion-extended-common-grid/issues"
   },
-  "homepage": "https://github.com/vasanthakumarsf3389/syncfusion-extended-common-grid#readme"
+  "homepage": "https://github.com/vasanthakumarsf3389/syncfusion-extended-common-grid#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
 }
