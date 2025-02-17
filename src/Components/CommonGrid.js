@@ -65,10 +65,7 @@ export const CommonGrid = forwardRef((props, gridInstance) => {
 })
 
 export const CommonGridColumnsDirective = ColumnsDirective;
-export const CommonGridColumnDirective = (props) => {
-    const { ...rest } = props;
-    return (<><ColumnDirective {...rest} /></>)
-}
+export const CommonGridColumnDirective = ColumnDirective;
 export const CommonGridInject = Inject;
 
 export const CommonGridPage = Page;
