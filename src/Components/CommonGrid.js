@@ -16,6 +16,7 @@ import {
 } from '@syncfusion/ej2-react-grids';
 export const CommonGrid = forwardRef((props, gridInstance) => {
     const {
+        children,
         dataSource,
         toolbar,
         editSettings,
@@ -23,16 +24,26 @@ export const CommonGrid = forwardRef((props, gridInstance) => {
         toolbarClick,
         columns,
         childGrid,
-        aggregates
+        aggregates,
+        allowPaging = true,
+        pageSize = 50,
+        allowSorting = true,
+        allowFiltering = true,
+        showColumnChooser = true,
+        allowExcelExport = true,
+        allowPdfExport = true,
+        height = '45vh',
+        width = '100%',
+        ...rest
     } = props;
     // https://helpej2.syncfusion.com/react/documentation/grid/performance#optimizing-react-component-rendering-by-mitigating-unnecessary-re-renders-during-state-updates
     const MemoGrid = useMemo(() => { // To avoid unneccessary re-rendering due to react state updates.
         return (
-            <GridComponent dataSource={dataSource} columns={columns} allowPaging={true}
-                pageSettings={{ pageSize: 50 }} // You can adjust the page size here
-                height={'45vh'} width={'100%'} toolbar={toolbar} allowSorting={true} editSettings={editSettings}
-                allowFiltering={true} showColumnChooser={true} filterSettings={filterSettings} allowExcelExport={true} allowPdfExport={true} toolbarClick={(args) => toolbarClick(args, gridInstance.current)} ref={gridInstance} childGrid={childGrid} aggregates={aggregates}>
-
+            <GridComponent dataSource={dataSource} columns={columns} allowPaging={allowPaging}
+                pageSettings={{ pageSize: pageSize }} // You can adjust the page size here
+                height={height} width={width} toolbar={toolbar} allowSorting={allowSorting} editSettings={editSettings}
+                allowFiltering={allowFiltering} showColumnChooser={showColumnChooser} filterSettings={filterSettings} allowExcelExport={allowExcelExport} allowPdfExport={allowPdfExport} toolbarClick={(args) => toolbarClick(args, gridInstance.current)} ref={gridInstance} childGrid={childGrid} aggregates={aggregates} {...rest}>
+                    {children}
                 <Inject services={[Page,
                     Sort,
                     Edit,
@@ -52,3 +63,21 @@ export const CommonGrid = forwardRef((props, gridInstance) => {
         </div>
     );
 })
+
+export const CommonGridColumnsDirective = ColumnsDirective;
+export const CommonGridColumnDirective = (props) => {
+    const { ...rest } = props;
+    return (<><ColumnDirective {...rest} /></>)
+}
+export const CommonGridInject = Inject;
+
+export const CommonGridPage = Page;
+export const CommonGridSort = Sort;
+export const CommonGridEdit = Edit;
+export const CommonGridAggregate = Aggregate;
+export const CommonGridFilter = Filter;
+export const CommonGridExcelExport = ExcelExport;
+export const CommonGridPdfExport = PdfExport;
+export const CommonGridColumnChooser = ColumnChooser;
+export const CommonGridDetailRow = DetailRow;
+export const CommonGridToolbar = Toolbar;

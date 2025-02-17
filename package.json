@@ -1,6 +1,6 @@
 {
   "name": "common-syncfusion-extended-grid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "vasanth",
   "license": "ISC",
   "main": "src/Components/CommonGrid.js",
@@ -56,5 +56,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasanthakumarsf3389/syncfusion-extended-common-grid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vasanthakumarsf3389/syncfusion-extended-common-grid/issues"
+  },
+  "homepage": "https://github.com/vasanthakumarsf3389/syncfusion-extended-common-grid#readme"
 }

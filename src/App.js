@@ -493,17 +493,17 @@
 
 // memory leak
 
-import {
-  GridComponent, ColumnsDirective, ColumnDirective, Inject, InfiniteScroll, VirtualScroll, Grid, RowDD, Toolbar, Group, Edit, Page, Filter, Sort, ColumnChooser, Search, Print, Reorder, Resize, ContextMenu, CommandColumn, Selection, DetailRow,
-  ColumnMenu,
-  ExcelExport,
-  Aggregate,
-  Freeze,
-  LazyLoadGroup,
-} from '@syncfusion/ej2-react-grids';
+// import {
+//   GridComponent, ColumnsDirective, ColumnDirective, Inject, InfiniteScroll, VirtualScroll, Grid, RowDD, Toolbar, Group, Edit, Page, Filter, Sort, ColumnChooser, Search, Print, Reorder, Resize, ContextMenu, CommandColumn, Selection, DetailRow,
+//   ColumnMenu,
+//   ExcelExport,
+//   Aggregate,
+//   Freeze,
+//   LazyLoadGroup,
+// } from '@syncfusion/ej2-react-grids';
 import { templateCompiler } from '@syncfusion/ej2-grids';
 import { Ajax, getValue } from "@syncfusion/ej2-base";
-import {NumericTextBoxComponent} from '@syncfusion/ej2-react-inputs';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import { useEffect, useRef, useState, useCallback, useMemo, FC, Fragment, MouseEvent, useContext, forwardRef } from 'react';
@@ -534,13 +534,13 @@ var OrderID = 10248;
 
 for (var i = 0; i < 20000; i++) {
   lazyLoadData.push({
-      'OrderID': OrderID + i,
-      'CustomerID': customerid[Math.floor(Math.random() * customerid.length)],
-      'CustomerName': customername[Math.floor(Math.random() * customername.length)],
-      'CustomerAddress': customeraddress[Math.floor(Math.random() * customeraddress.length)],
-      'ProductName': product[Math.floor(Math.random() * product.length)],
-      'ProductID': i,
-      'Quantity': quantityperunit[Math.floor(Math.random() * quantityperunit.length)]
+    'OrderID': OrderID + i,
+    'CustomerID': customerid[Math.floor(Math.random() * customerid.length)],
+    'CustomerName': customername[Math.floor(Math.random() * customername.length)],
+    'CustomerAddress': customeraddress[Math.floor(Math.random() * customeraddress.length)],
+    'ProductName': product[Math.floor(Math.random() * product.length)],
+    'ProductID': i,
+    'Quantity': quantityperunit[Math.floor(Math.random() * quantityperunit.length)]
   });
 }
 
@@ -913,7 +913,7 @@ for (var i = 0; i < 20000; i++) {
 //         //     </li>	
 //         //   </ul>
 //         // </nav>
-  
+
 //         // <Routes>
 //         //   <Route path="/" element={<Localbinding/>} />
 //         //   <Route path="/grid2" element={<Localbinding1 />} />
@@ -930,7 +930,7 @@ for (var i = 0; i < 20000; i++) {
 //               			</li>	
 //             		</ul>
 //           		</nav>
-	
+
 //           		<Routes>
 //             		<Route path="/" element={<Localbinding />} />
 //             		<Route path="/grid2" element={<Localbinding1 />} />
@@ -958,7 +958,7 @@ for (var i = 0; i < 20000; i++) {
 //   .e-bigger .image {
 //       height: 36px;
 //   }
-  
+
 //   #popup {
 //       position: absolute;
 //       background-color: transparent;
@@ -1097,11 +1097,11 @@ for (var i = 0; i < 20000; i++) {
 //       what === true || what === 'true'
 //     );
 //     const [loaded, setLoaded] = useState(false);
-  
+
 //     useEffect(() => {
 //       if (usePersistence === null) return;
 //       if (!loaded) return;
-  
+
 //       if (usePersistence) {
 //         if (usePersistence === null) return;
 //       if (!loaded) return;
@@ -1113,14 +1113,14 @@ for (var i = 0; i < 20000; i++) {
 //       if (gridInstanceRef.current) {
 //         gridInstanceRef.current.hardRefresh();
 //       }
-  
+
 //       // eslint-disable-next-line react-hooks/exhaustive-deps
 //     }, [usePersistence]);
-  
+
 //     useEffect(() => {
 //       setLoaded(true);
 //     }, []);
-  
+
 //     const customerTemplate = (props) => {
 //       return (
 //         <div>
@@ -1129,7 +1129,7 @@ for (var i = 0; i < 20000; i++) {
 //       );
 //     };
 //     const headerTemplate = customerTemplate;
-  
+
 //     const gridTemplate = (props) => {
 //       return (
 //         <div>
@@ -1140,7 +1140,7 @@ for (var i = 0; i < 20000; i++) {
 //       );
 //     };
 //     const columnTemplate = gridTemplate;
-  
+
 //     var headerColumns = [];
 //     useMemo(() => {
 //       if (window.localStorage['gridmy-clients-grid']) {
@@ -1203,13 +1203,13 @@ for (var i = 0; i < 20000; i++) {
 //         ];
 //       }
 //     }, [columnTemplate, gridTemplate, headerColumns])
-    
-  
+
+
 //     const disablePersistance = () => {
 //       setUsePersistence(false);
 //       window.localStorage.removeItem(`grid${gridId}`);
 //     };
-  
+
 //     const enablePersistance = () => {
 //       setUsePersistence(true);
 //       // if use column template
@@ -1228,7 +1228,7 @@ for (var i = 0; i < 20000; i++) {
 //     function dataBound(args) {
 //       console.log('databound')
 //     }
-  
+
 //     return (
 //       <div>
 //         <div className="col-xs-12 col-sm-12 col-lg-12 col-md-12">
@@ -1267,7 +1267,7 @@ for (var i = 0; i < 20000; i++) {
 //       </div>
 //     );
 //   };
-  
+
 //   export default App;
 
 
@@ -1983,7 +1983,7 @@ for (var i = 0; i < 20000; i++) {
 //     //       let selecteMessage = document.getElementsByClassName("agencyName")[0];
 //     //       let message = selecteMessage.querySelector("b");
 //     //       message.textContent = selRecord?.agency_Name;
-  
+
 //     //       let see;
 //     //       let d = GetTransactionsGrid();
 //     //       d.then((result) => {
@@ -2015,9 +2015,9 @@ for (var i = 0; i < 20000; i++) {
 //     //       let d = GetTransactionsGrid();
 //     //       d.then((result) => {
 //     //         //console.log("transac", result);
-  
+
 //     //         // if (transactionDetailGrid && transactionDetailGrid.dataSource) {
-  
+
 //     //         see = result?.filter(
 //     //           (record) =>
 //     //             record.commissionS_AGENT_CODE === selRecord?.agency_Code &&
@@ -2184,7 +2184,7 @@ for (var i = 0; i < 20000; i++) {
 //         width: "100%",
 //         toolbar: toolbarOptions2,
 //       };
-    
+
 //     return (<div className='control-pane'>
 //             <div className='control-section'>
 //                 {/* <GridComponent dataSource={master.slice(0, 10)} selectedRowIndex={2} rowSelected={rowselect.bind(this)} dataBound={dataBound.bind(this)}>
@@ -2428,7 +2428,7 @@ for (var i = 0; i < 20000; i++) {
 //        const movies = await response.json();
 //        setData(movies.value);
 //     };
-  
+
 //     useEffect(() => {
 //       getAllDataForChapter();
 //     }, []);
@@ -2503,7 +2503,7 @@ for (var i = 0; i < 20000; i++) {
 //         }),
 //         fields: { text: 'ShipCountry', value: 'ShipCountry' },
 //         query: new Query(),
-        
+
 //       },
 //     };
 
@@ -2967,7 +2967,7 @@ for (var i = 0; i < 20000; i++) {
 //   const dataBound = () => {
 //     console.log('databounded!');
 //     console.log(gridInstance.totalDataRecordsCount);
-    
+
 //   };
 
 //   const dataStateChange = (state) => {
@@ -3067,7 +3067,7 @@ import {
   user3ChildGrid as childGrid,
   user2aggregates as aggregates
 } from './gridConfigData';
-import { CommonGrid } from './Components/CommonGrid';
+import { CommonGrid, CommonGridColumnsDirective, CommonGridColumnDirective, CommonGridInject, CommonGridPage, CommonGridAggregate, CommonGridFilter, CommonGridSort, CommonGridEdit, CommonGridExcelExport, CommonGridPdfExport, CommonGridColumnChooser, CommonGridDetailRow, CommonGridToolbar } from './Components/CommonGrid';
 
 const App = () => {
   const [culture, setCultureState] = useState('en-US');
@@ -3142,11 +3142,39 @@ const App = () => {
             editSettings,
             filterSettings,
             toolbarClick,
-            columns,
+            // columns,
             childGrid: user === 'User3' ? childGrid : undefined,
             aggregates: user === 'User2' ? aggregates : undefined
           }}
-        />
+        >
+          {/* Iterate through the columns */}
+          <CommonGridColumnsDirective>
+            {columns?.map((column, index) => {
+              // Destructure known properties and collect the rest
+              const { field, headerText, width, ...rest } = column;
+
+              return (
+                <CommonGridColumnDirective
+                  key={index}
+                  field={field}
+                  headerText={headerText}
+                  width={width}
+                  {...rest} // Spread the rest of the properties
+                />
+              );
+            })}
+          </CommonGridColumnsDirective>
+          <CommonGridInject services={[CommonGridPage,
+            CommonGridSort,
+            CommonGridEdit,
+            CommonGridAggregate,
+            CommonGridFilter,
+            CommonGridExcelExport,
+            CommonGridPdfExport,
+            CommonGridColumnChooser,
+            CommonGridDetailRow,
+            CommonGridToolbar,]} />
+        </CommonGrid>
       </div>
       {/* end of main content declaration */}
       {/* sidebar element declaration */}
