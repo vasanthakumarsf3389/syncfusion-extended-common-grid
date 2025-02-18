@@ -1,5 +1,6 @@
 import React from 'react';
 import { GridComponent, GridModel, ColumnDirective, ColumnsDirective, Inject, Page, Sort, Edit, Filter, ExcelExport, PdfExport, ColumnChooser, Toolbar, DetailRow, Aggregate, ColumnModel } from '@syncfusion/ej2-react-grids';
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 interface CommonGridProps extends GridModel, React.RefAttributes<GridComponent> {
     children?: React.ReactNode;
 }
@@ -20,4 +21,7 @@ export declare const CommonGridToolbar: typeof Toolbar;
 export type CommonGridRef = GridComponent;
 export type CommonGridModel = GridModel;
 export type CommonGridColumnModel = ColumnModel;
+export declare function jsonToXml(json: Record<string, any>): string;
+export declare function downloadXml(json: Record<string, any>, filename?: string): void;
+export declare function toolbarClick(args: ClickEventArgs, gridInstance: GridComponent): void;
 export {};

@@ -1,6 +1,6 @@
 {
   "name": "common-syncfusion-extended-grid",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "vasanth",
   "license": "MIT",
   "main": "lib/Components/CommonGrid.js",
