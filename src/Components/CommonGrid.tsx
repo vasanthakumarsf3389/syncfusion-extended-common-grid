@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { forwardRef, RefAttributes } from 'react';
+import React, { forwardRef } from 'react';
 import {
   GridComponent,
   GridModel,
@@ -17,16 +17,41 @@ import {
   DetailRow,
   Aggregate,
   ColumnModel,
-Grid
+  Grid,
 } from '@syncfusion/ej2-react-grids';
 // Assuming CommonGrid is declared in the same file or imported
 
-interface CommonGridProps extends GridModel, React.RefAttributes<GridComponent> {
-    children?: React.ReactNode;
+interface CommonGridProps
+  extends GridModel,
+    React.RefAttributes<GridComponent> {
+  children?: React.ReactNode;
 }
-export const CommonGrid: React.FC<CommonGridProps> = forwardRef((props, ref) => (
-  <GridComponent {...props} ref={ref} />
-));
+export const CommonGrid: React.FC<CommonGridProps> = forwardRef(
+  (props, ref) => (
+    <GridComponent
+      width={props.width || '100%'}
+      height={props.height || '45vh'}
+      allowPdfExport={props.allowPdfExport || true}
+      allowExcelExport={props.allowExcelExport || true}
+      showColumnChooser={props.showColumnChooser || true}
+      allowFiltering={props.allowFiltering || true}
+      filterSettings={props.filterSettings || { type: 'Excel' }}
+      editSettings={
+        props.editSettings || {
+          allowEditing: true,
+          allowAdding: true,
+          allowDeleting: true,
+        }
+      }
+      toolbar={props.toolbar || ['Add', 'Edit', 'Delete', 'Update', 'Cancel']}
+      allowPaging={props.allowPaging || true}
+      pageSettings={props.pageSettings || { pageSize: 50 }}
+      allowSorting={props.allowSorting || true}
+      {...props}
+      ref={ref}
+    />
+  )
+);
 export const CommonGridColumnsDirective = ColumnsDirective;
 export const CommonGridColumnDirective = ColumnDirective;
 export const CommonGridInject = Inject;
